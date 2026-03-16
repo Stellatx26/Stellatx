@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stella TX — Local SEO & AI Visibility for Katy Home Services</title>
+  <meta name="description" content="Stella TX helps Katy, TX home services businesses dominate Google Maps and AI search. Local SEO + LLM Engine Optimization for HVAC, plumbing, roofing, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #06080F;
+      --deep:   #0C1020;
+      --mid:    #131828;
+      --panel:  #1A2035;
+      --border: rgba(212,168,67,0.18);
+      --gold:   #D4A843;
+      --gold2:  #F0C860;
+      --pale:   #F5EDD8;
+      --white:  #FFFFFF;
+      --muted:  #8A91A8;
+      --body:   'DM Sans', sans-serif;
+      --display:'Cormorant Garamond', serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--ink);
+      color: var(--pale);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ── Noise texture overlay ───────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ── Typography ──────────────────────────────── */
+    h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.1; }
+    h1 { font-size: clamp(3.2rem, 8vw, 7rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -0.01em; }
+    h3 { font-size: 1.4rem; font-weight: 600; }
+    p  { font-weight: 300; color: #B0B8CC; }
+
+    .gold { color: var(--gold); }
+    .pale { color: var(--pale); }
+
+    /* ── Layout ──────────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    section { position: relative; z-index: 1; }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.4rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(6,8,15,0.95), transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: var(--display); font-size: 1.5rem; font-weight: 700;
+      color: var(--pale); text-decoration: none; letter-spacing: 0.02em;
+    }
+
+    .nav-star {
+      width: 22px; height: 22px;
+      animation: spin-slow 12s linear infinite;
+    }
+
+    @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.88rem;
+      font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold); color: var(--ink) !important;
+      padding: 0.5rem 1.2rem; border-radius: 2px;
+      font-weight: 600 !important; letter-spacing: 0.03em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold2) !important; color: var(--ink) !important; }
+
+    /* ── HERO ────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 8rem 2rem 5rem;
+      position: relative; overflow: hidden;
+    }
+
+    /* Star constellation background */
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(212,168,67,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at 10% 80%, rgba(212,168,67,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 2rem;
+      animation: fade-up 0.8s ease both;
+    }
+
+    .eyebrow-line {
+      width: 40px; height: 1px; background: var(--gold); opacity: 0.6;
+    }
+
+    .hero-headline {
+      max-width: 900px;
+      animation: fade-up 0.8s 0.1s ease both;
+    }
+
+    .hero-headline em {
+      font-style: italic; color: var(--gold);
+      position: relative; display: inline-block;
+    }
+
+    .hero-sub {
+      max-width: 540px;
+      font-size: 1.1rem; line-height: 1.7;
+      margin: 2rem 0 3rem;
+      animation: fade-up 0.8s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      animation: fade-up 0.8s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--gold); color: var(--ink);
+      padding: 0.9rem 2rem; font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; letter-spacing: 0.03em;
+      border-radius: 2px; transition: all 0.2s;
+      border: 2px solid var(--gold);
+    }
+    .btn-primary:hover { background: var(--gold2); border-color: var(--gold2); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--pale);
+      padding: 0.9rem 2rem; font-weight: 500; font-size: 0.95rem;
+      text-decoration: none; letter-spacing: 0.03em;
+      border-radius: 2px; border: 1px solid rgba(245,237,216,0.2);
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Big decorative star */
+    .hero-star-deco {
+      position: absolute; right: -80px; top: 50%; transform: translateY(-50%);
+      width: 500px; height: 500px; opacity: 0.04;
+      animation: pulse-star 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-star {
+      0%, 100% { opacity: 0.04; transform: translateY(-50%) scale(1); }
+      50%       { opacity: 0.07; transform: translateY(-50%) scale(1.05); }
+    }
+
+    .hero-stats {
+      display: flex; gap: 3rem; margin-top: 5rem; flex-wrap: wrap;
+      border-top: 1px solid var(--border); padding-top: 2.5rem;
+      animation: fade-up 0.8s 0.4s ease both;
+    }
+
+    .stat-num {
+      font-family: var(--display); font-size: 2.8rem; font-weight: 700;
+      color: var(--gold); line-height: 1;
+    }
+    .stat-label { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* ── SECTION SHARED ──────────────────────────── */
+    .section-eyebrow {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold);
+      display: flex; align-items: center; gap: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+    .section-eyebrow::before {
+      content: ''; width: 28px; height: 1px; background: var(--gold); opacity: 0.7;
+    }
+
+    /* ── PROBLEM / INTRO ─────────────────────────── */
+    #problem {
+      padding: 7rem 0;
+      background: var(--deep);
+    }
+
+    .problem-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+
+    .problem-visual {
+      position: relative;
+    }
+
+    .rank-card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 4px; padding: 1.4rem 1.6rem;
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 0.8rem;
+      position: relative; overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .rank-card:hover { transform: translateX(4px); }
+
+    .rank-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px; background: var(--gold);
+    }
+
+    .rank-num {
+      font-family: var(--display); font-size: 2rem; font-weight: 700;
+      color: var(--gold); min-width: 2.5rem; text-align: center;
+    }
+
+    .rank-info { flex: 1; }
+    .rank-name { font-weight: 500; font-size: 0.95rem; color: var(--pale); }
+    .rank-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+
+    .rank-badge {
+      font-size: 0.72rem; font-weight: 600; padding: 0.25rem 0.6rem;
+      border-radius: 2px; letter-spacing: 0.04em;
+    }
+    .rank-badge.you { background: rgba(212,168,67,0.15); color: var(--gold); border: 1px solid rgba(212,168,67,0.3); }
+    .rank-badge.them { background: rgba(138,145,168,0.1); color: var(--muted); border: 1px solid rgba(138,145,168,0.2); }
+
+    .rank-card.highlight { border-color: rgba(212,168,67,0.4); background: rgba(212,168,67,0.05); }
+
+    .problem-text h2 { margin-bottom: 1.5rem; }
+    .problem-text p  { margin-bottom: 1.2rem; font-size: 1.02rem; }
+
+    /* ── WHAT WE DO ──────────────────────────────── */
+    #services {
+      padding: 8rem 0;
+      background: var(--ink);
+    }
+
+    .services-header { text-align: center; max-width: 640px; margin: 0 auto 5rem; }
+    .services-header h2 { margin-bottom: 1rem; }
+    .services-header p { font-size: 1.05rem; }
+
+    .services-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: 4px; overflow: hidden;
+    }
+
+    .service-card {
+      background: var(--deep); padding: 3rem;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .service-card:hover { background: var(--panel); }
+
+    .service-icon {
+      width: 48px; height: 48px; margin-bottom: 1.8rem;
+      color: var(--gold);
+    }
+
+    .service-card h3 { margin-bottom: 0.8rem; color: var(--pale); font-size: 1.5rem; }
+    .service-card p  { font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; }
+
+    .service-list { list-style: none; }
+    .service-list li {
+      font-size: 0.88rem; color: #8A91A8;
+      padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .service-list li::before { content: '★'; color: var(--gold); font-size: 0.6rem; flex-shrink: 0; }
+    .service-list li:last-child { border-bottom: none; }
+
+    .service-tag {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+      padding: 0.2rem 0.6rem; border-radius: 2px; text-transform: uppercase;
+    }
+    .tag-seo { background: rgba(212,168,67,0.1); color: var(--gold); border: 1px solid rgba(212,168,67,0.25); }
+    .tag-leo { background: rgba(100,160,255,0.08); color: #7EB8FF; border: 1px solid rgba(100,160,255,0.2); }
+    .tag-new { background: rgba(100,220,140,0.08); color: #72DFA0; border: 1px solid rgba(100,220,140,0.2); }
+
+    /* ── PRICING ─────────────────────────────────── */
+    #pricing {
+      padding: 8rem 0;
+      background: var(--deep);
+    }
+
+    .pricing-header { text-align: center; max-width: 580px; margin: 0 auto 5rem; }
+    .pricing-header h2 { margin-bottom: 1rem; }
+
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+    }
+
+    .pricing-card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 4px; padding: 2.5rem 2rem;
+      position: relative; transition: transform 0.25s, border-color 0.25s;
+      display: flex; flex-direction: column;
+    }
+    .pricing-card:hover { transform: translateY(-4px); border-color: rgba(212,168,67,0.4); }
+
+    .pricing-card.featured {
+      border-color: var(--gold); background: linear-gradient(145deg, rgba(212,168,67,0.07), var(--panel));
+    }
+
+    .featured-label {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--ink);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+      padding: 0.25rem 1rem; text-transform: uppercase;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .pricing-tier { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; }
+    .pricing-name { font-family: var(--display); font-size: 1.6rem; font-weight: 700; color: var(--pale); margin-bottom: 1.5rem; }
+    .pricing-price { margin-bottom: 0.3rem; }
+    .pricing-amount { font-family: var(--display); font-size: 3rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .pricing-period { font-size: 0.85rem; color: var(--muted); }
+    .pricing-desc { font-size: 0.88rem; color: var(--muted); margin: 1.2rem 0 2rem; line-height: 1.6; }
+
+    .pricing-features { list-style: none; flex: 1; margin-bottom: 2rem; }
+    .pricing-features li {
+      font-size: 0.88rem; color: #9AA3B8;
+      padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex; gap: 0.6rem; align-items: flex-start;
+    }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-features li span { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+
+    .pricing-cta {
+      display: block; text-align: center;
+      padding: 0.85rem; font-weight: 600; font-size: 0.9rem;
+      text-decoration: none; border-radius: 2px; letter-spacing: 0.03em;
+      transition: all 0.2s;
+    }
+    .pricing-cta.primary { background: var(--gold); color: var(--ink); }
+    .pricing-cta.primary:hover { background: var(--gold2); }
+    .pricing-cta.outline { border: 1px solid var(--border); color: var(--pale); }
+    .pricing-cta.outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── PROCESS ─────────────────────────────────── */
+    #process {
+      padding: 8rem 0;
+      background: var(--ink);
+    }
+
+    .process-header { max-width: 560px; margin-bottom: 5rem; }
+    .process-header h2 { margin-bottom: 1rem; }
+
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: ''; position: absolute;
+      top: 24px; left: calc(12.5%); right: calc(12.5%);
+      height: 1px; background: linear-gradient(to right, var(--gold), transparent, var(--gold));
+      opacity: 0.3;
+    }
+
+    .process-step { padding: 0 1.5rem; text-align: center; }
+
+    .step-circle {
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 1px solid var(--gold); background: var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-family: var(--display); font-size: 1.2rem; font-weight: 700; color: var(--gold);
+      position: relative; z-index: 1;
+      transition: background 0.3s;
+    }
+    .process-step:hover .step-circle { background: rgba(212,168,67,0.1); }
+
+    .step-title { font-weight: 600; color: var(--pale); margin-bottom: 0.6rem; font-size: 1rem; }
+    .step-desc  { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── VERTICALS ───────────────────────────────── */
+    #verticals {
+      padding: 7rem 0;
+      background: var(--deep);
+      border-top: 1px solid var(--border);
+    }
+
+    .verticals-header { text-align: center; margin-bottom: 4rem; }
+    .verticals-header h2 { margin-bottom: 0.8rem; }
+
+    .verticals-row {
+      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+    }
+
+    .vertical-pill {
+      display: flex; align-items: center; gap: 0.6rem;
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 100px; padding: 0.7rem 1.4rem;
+      font-size: 0.9rem; font-weight: 500; color: #9AA3B8;
+      transition: all 0.2s; cursor: default;
+    }
+    .vertical-pill:hover { border-color: var(--gold); color: var(--pale); }
+    .vertical-pill .icon { font-size: 1.1rem; }
+
+    /* ── TESTIMONIAL / TRUST ─────────────────────── */
+    #trust {
+      padding: 8rem 0;
+      background: var(--ink);
+    }
+
+    .trust-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+    }
+
+    .trust-quote {
+      position: relative; padding: 3rem;
+      background: var(--panel); border: 1px solid var(--border); border-radius: 4px;
+    }
+
+    .trust-quote::before {
+      content: '"'; position: absolute; top: -0.5rem; left: 2rem;
+      font-family: var(--display); font-size: 8rem; color: var(--gold);
+      opacity: 0.15; line-height: 1;
+    }
+
+    .trust-quote p {
+      font-family: var(--display); font-size: 1.35rem; font-style: italic;
+      color: var(--pale); line-height: 1.5; position: relative; z-index: 1;
+    }
+
+    .trust-attr {
+      margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .trust-attr strong { color: var(--pale); display: block; }
+
+    .trust-points h2 { margin-bottom: 2rem; }
+
+    .trust-point {
+      display: flex; gap: 1.2rem; margin-bottom: 2rem; align-items: flex-start;
+    }
+
+    .tp-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: rgba(212,168,67,0.08); border: 1px solid rgba(212,168,67,0.2);
+      border-radius: 4px; display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 1rem;
+    }
+
+    .tp-title { font-weight: 600; color: var(--pale); margin-bottom: 0.3rem; }
+    .tp-desc  { font-size: 0.9rem; color: var(--muted); }
+
+    /* ── CONTACT / CTA ───────────────────────────── */
+    #contact {
+      padding: 8rem 0 6rem;
+      background: var(--deep);
+      position: relative; overflow: hidden;
+    }
+
+    #contact::before {
+      content: ''; position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(212,168,67,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-inner { text-align: center; max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
+    .contact-inner h2 { margin-bottom: 1.2rem; }
+    .contact-inner p { font-size: 1.05rem; margin-bottom: 3rem; }
+
+    .contact-form {
+      display: flex; flex-direction: column; gap: 1rem;
+      text-align: left;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--panel); border: 1px solid var(--border);
+      color: var(--pale); padding: 0.85rem 1rem;
+      border-radius: 2px; font-family: var(--body); font-size: 0.95rem;
+      transition: border-color 0.2s; outline: none; width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #4A5168; }
+    .form-group select option { background: var(--panel); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-submit {
+      background: var(--gold); color: var(--ink);
+      border: none; padding: 1rem 2rem;
+      font-family: var(--body); font-size: 1rem; font-weight: 700;
+      letter-spacing: 0.04em; border-radius: 2px;
+      cursor: pointer; transition: all 0.2s; width: 100%;
+    }
+    .form-submit:hover { background: var(--gold2); transform: translateY(-1px); }
+
+    .contact-alts {
+      display: flex; gap: 2rem; justify-content: center;
+      margin-top: 2.5rem; flex-wrap: wrap;
+    }
+
+    .contact-alt {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.88rem; color: var(--muted); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-alt:hover { color: var(--gold); }
+    .contact-alt svg { width: 16px; height: 16px; }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--ink); border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--display); font-size: 1.1rem; font-weight: 700;
+      color: var(--pale); display: flex; align-items: center; gap: 0.5rem;
+    }
+
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: 0.82rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-copy { font-size: 0.78rem; color: #3A4158; }
+
+    /* ── Animations ──────────────────────────────── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Mobile ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      .problem-grid   { grid-template-columns: 1fr; gap: 3rem; }
+      .services-grid  { grid-template-columns: 1fr; }
+      .pricing-grid   { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .process-steps  { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .process-steps::before { display: none; }
+      .trust-inner    { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row       { grid-template-columns: 1fr; }
+      .nav-links      { display: none; }
+      .hero-star-deco { display: none; }
+      .hero-stats     { gap: 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .process-steps { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <svg class="nav-star" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#D4A843"/>
+      </svg>
+      Stella TX
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Free Audit</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        Katy, TX Local SEO &amp; AI Visibility Agency
+      </div>
+
+      <h1 class="hero-headline">
+        Make your business<br />
+        <em>impossible to miss</em>
+      </h1>
+
+      <p class="hero-sub">
+        Stella TX helps Katy home services businesses dominate Google Maps, outrank competitors, and show up when customers ask AI tools who to call. Local SEO + LLM Engine Optimization, built for HVAC, plumbing, roofing, and more.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          Get Your Free GBP Score
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#services" class="btn-ghost">See How It Works</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">8</div>
+          <div class="stat-label">Point GBP audit system</div>
+        </div>
+        <div>
+          <div class="stat-num">16</div>
+          <div class="stat-label">Prompts: SEO + AI visibility</div>
+        </div>
+        <div>
+          <div class="stat-num">90</div>
+          <div class="stat-label">Days to outrank competitors</div>
+        </div>
+        <div>
+          <div class="stat-num">#1</div>
+          <div class="stat-label">LEO agency in Katy TX</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative star -->
+    <svg class="hero-star-deco" viewBox="0 0 24 24" fill="#D4A843">
+      <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/>
+    </svg>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <div class="problem-grid">
+        <div class="problem-visual reveal">
+          <div class="rank-card">
+            <div class="rank-num">1</div>
+            <div class="rank-info">
+              <div class="rank-name">Katy Pro Plumbing</div>
+              <div class="rank-meta">★★★★★ 214 reviews · 18/mo velocity</div>
+            </div>
+            <span class="rank-badge them">Competitor</span>
+          </div>
+          <div class="rank-card">
+            <div class="rank-num">2</div>
+            <div class="rank-info">
+              <div class="rank-name">West Houston Plumbing Co.</div>
+              <div class="rank-meta">★★★★☆ 87 reviews · 11/mo velocity</div>
+            </div>
+            <span class="rank-badge them">Competitor</span>
+          </div>
+          <div class="rank-card highlight">
+            <div class="rank-num gold">1</div>
+            <div class="rank-info">
+              <div class="rank-name">Your Business — after Stella TX</div>
+              <div class="rank-meta">★★★★★ Growing fast · Top of Map Pack</div>
+            </div>
+            <span class="rank-badge you">You</span>
+          </div>
+          <div style="font-size:0.78rem; color: var(--muted); text-align:center; margin-top:1rem; letter-spacing:0.04em;">
+            ↑ Typical result within 60–90 days of execution
+          </div>
+        </div>
+
+        <div class="problem-text reveal">
+          <div class="section-eyebrow">The Problem</div>
+          <h2>Your competitors are<br /><span class="gold">stealing your customers</span></h2>
+          <p>When a homeowner in Cinco Ranch needs emergency AC repair, they open Google and call whoever is at the top of the map. If that is not you, it is someone else — every single time.</p>
+          <p>Most Katy home services businesses have Google Business Profiles that are half-empty, outdated, and invisible for the searches that actually bring in revenue.</p>
+          <p>We fix that. Systematically. With data, not guesswork.</p>
+          <a href="#contact" class="btn-primary" style="margin-top:1.5rem; display:inline-flex; align-items:center; gap:.5rem;">
+            See where you stand — free
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-eyebrow" style="justify-content:center;">What We Do</div>
+        <h2>Two systems.<br />One unbeatable presence.</h2>
+        <p>We run two parallel optimization tracks — traditional Local SEO for Google Maps rankings, and LLM Engine Optimization for AI-powered search. No other Katy agency does both.</p>
+      </div>
+
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <span class="service-tag tag-seo">Local SEO</span>
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="20" stroke="#D4A843" stroke-width="1.5"/>
+            <path d="M24 4C24 4 16 14 16 24s8 20 8 20M24 4c0 0 8 10 8 20s-8 20-8 20M4 24h40" stroke="#D4A843" stroke-width="1.5"/>
+            <circle cx="24" cy="24" r="4" fill="#D4A843"/>
+          </svg>
+          <h3>Google Business Profile Optimization</h3>
+          <p>We audit every layer of your GBP presence — categories, attributes, posts, photos, reviews, and citations — and fix everything competitors are exploiting.</p>
+          <ul class="service-list">
+            <li>8-point GBP audit &amp; competitor gap analysis</li>
+            <li>Category and attribute optimization</li>
+            <li>Weekly posts, photo uploads, Q&amp;A seeding</li>
+            <li>Review velocity strategy &amp; response templates</li>
+            <li>Citation cleanup across 30+ directories</li>
+            <li>Monthly rank tracking and reporting</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <span class="service-tag tag-leo">AI Visibility</span>
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+            <path d="M8 40l8-8M40 8l-8 8M24 24l-8-8M24 24l8 8" stroke="#7EB8FF" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="6" stroke="#7EB8FF" stroke-width="1.5"/>
+            <circle cx="8" cy="40" r="3" fill="#7EB8FF"/>
+            <circle cx="40" cy="8" r="3" fill="#7EB8FF"/>
+            <circle cx="16" cy="16" r="2" fill="#7EB8FF" opacity="0.5"/>
+            <circle cx="32" cy="32" r="2" fill="#7EB8FF" opacity="0.5"/>
+          </svg>
+          <h3>LLM Engine Optimization</h3>
+          <p>When customers ask ChatGPT or Perplexity "who's the best plumber in Katy TX" — we make sure they hear your name. No other local agency in Katy offers this.</p>
+          <ul class="service-list">
+            <li>AI visibility baseline audit (ChatGPT, Perplexity, Google AI)</li>
+            <li>Schema markup implementation (LocalBusiness, FAQ, Service)</li>
+            <li>Entity clarity optimization across web presence</li>
+            <li>Review content coaching for AI signal keywords</li>
+            <li>FAQ content targeting AI-answer queries</li>
+            <li>Monthly LLM visibility reporting</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <span class="service-tag tag-seo">On-Page SEO</span>
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+            <rect x="8" y="8" width="32" height="32" rx="2" stroke="#D4A843" stroke-width="1.5"/>
+            <path d="M16 18h16M16 24h12M16 30h8" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <h3>Website &amp; Content Optimization</h3>
+          <p>Your GBP and your website work together. We optimize title tags, build local landing pages, and create content that ranks for every neighborhood you serve.</p>
+          <ul class="service-list">
+            <li>Title tags, meta descriptions, header optimization</li>
+            <li>Local landing pages per neighborhood (Cinco Ranch, Fulshear, etc.)</li>
+            <li>FAQ content targeting AI answer queries</li>
+            <li>Core Web Vitals and mobile optimization review</li>
+            <li>Internal linking for local relevance</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <span class="service-tag tag-new">Add-On</span>
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+            <path d="M24 8v32M8 24h32" stroke="#72DFA0" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="16" stroke="#72DFA0" stroke-width="1.5"/>
+            <circle cx="24" cy="8"  r="2" fill="#72DFA0"/>
+            <circle cx="24" cy="40" r="2" fill="#72DFA0"/>
+            <circle cx="8"  cy="24" r="2" fill="#72DFA0"/>
+            <circle cx="40" cy="24" r="2" fill="#72DFA0"/>
+          </svg>
+          <h3>Review Generation System</h3>
+          <p>Automated SMS and email follow-up after every job — naturally coaching customers to mention your service, their neighborhood, and their experience.</p>
+          <ul class="service-list">
+            <li>Automated post-job review request sequence</li>
+            <li>Keyword coaching built into the ask</li>
+            <li>Review velocity tracking month-over-month</li>
+            <li>Competitor velocity benchmarking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="pricing-header reveal">
+        <div class="section-eyebrow" style="justify-content:center;">Pricing</div>
+        <h2>Simple, transparent packages</h2>
+        <p>Start with the audit. See real data. Decide from there. No long-term commitment required to get started.</p>
+      </div>
+
+      <div class="pricing-grid reveal">
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Tier 1</div>
+          <div class="pricing-name">GBP Audit &amp; Action Plan</div>
+          <div class="pricing-price">
+            <span class="pricing-amount">$600</span>
+          </div>
+          <div class="pricing-period">One-time · delivered in 5–7 days</div>
+          <p class="pricing-desc">A complete picture of where you stand and exactly what to fix. No ongoing commitment — most clients convert to a retainer after seeing the depth of findings.</p>
+          <ul class="pricing-features">
+            <li><span>★</span>Full 8-point GBP audit</li>
+            <li><span>★</span>3-competitor gap analysis</li>
+            <li><span>★</span>LLM visibility snapshot</li>
+            <li><span>★</span>Citation consistency check</li>
+            <li><span>★</span>Prioritized action plan</li>
+            <li><span>★</span>60-min walkthrough call</li>
+          </ul>
+          <a href="#contact" class="pricing-cta outline">Start with the Audit</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="featured-label">Most Popular</div>
+          <div class="pricing-tier">Tier 2</div>
+          <div class="pricing-name">Local Visibility Retainer</div>
+          <div class="pricing-price">
+            <span class="pricing-amount">$900</span>
+          </div>
+          <div class="pricing-period">per month · 3-month minimum</div>
+          <p class="pricing-desc">Full monthly GBP management — we do the execution so you can run your business. This is where compounding begins.</p>
+          <ul class="pricing-features">
+            <li><span>★</span>2–3 GBP posts per week</li>
+            <li><span>★</span>Weekly photo upload plan</li>
+            <li><span>★</span>Review responses within 24hrs</li>
+            <li><span>★</span>Citation monitoring &amp; cleanup</li>
+            <li><span>★</span>Q&amp;A monitoring &amp; seeding</li>
+            <li><span>★</span>Monthly performance report</li>
+            <li><span>★</span>Monthly description refresh</li>
+          </ul>
+          <a href="#contact" class="pricing-cta primary">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Tier 3</div>
+          <div class="pricing-name">Full SEO + AI Visibility</div>
+          <div class="pricing-price">
+            <span class="pricing-amount">$1,750</span>
+          </div>
+          <div class="pricing-period">per month · 6-month minimum</div>
+          <p class="pricing-desc">Everything in Tier 2 plus full website optimization and LLM Engine Optimization — dominating both traditional and AI search simultaneously.</p>
+          <ul class="pricing-features">
+            <li><span>★</span>Everything in Tier 2</li>
+            <li><span>★</span>Website on-page SEO</li>
+            <li><span>★</span>1–2 local landing pages/month</li>
+            <li><span>★</span>Schema markup implementation</li>
+            <li><span>★</span>Full 8-prompt LEO audit</li>
+            <li><span>★</span>Monthly LLM visibility report</li>
+            <li><span>★</span>Backlink outreach</li>
+          </ul>
+          <a href="#contact" class="pricing-cta outline">Let's Talk</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="process-header reveal">
+        <div class="section-eyebrow">How It Works</div>
+        <h2>From audit to<br /><span class="gold">top of the map</span></h2>
+        <p>A four-step system that removes all guesswork from local search dominance.</p>
+      </div>
+
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <div class="step-circle">1</div>
+          <div class="step-title">Free GBP Score</div>
+          <div class="step-desc">We audit your Google presence in 24 hours and show you exactly where you stand versus your top 3 competitors — for free.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">2</div>
+          <div class="step-title">Full Audit &amp; Plan</div>
+          <div class="step-desc">Our 16-prompt system (8 SEO + 8 LEO) produces a prioritized action plan with specific fixes ranked by impact, not vague recommendations.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">3</div>
+          <div class="step-title">Systematic Execution</div>
+          <div class="step-desc">We handle the execution monthly — posts, photos, reviews, citations, content, and AI optimization — consistently, week after week.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">4</div>
+          <div class="step-title">Measure &amp; Compound</div>
+          <div class="step-desc">Monthly reports show ranking movement, call volume, and AI visibility changes. Ninety days of execution outranks businesses established for years.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERTICALS -->
+  <section id="verticals">
+    <div class="container">
+      <div class="verticals-header reveal">
+        <div class="section-eyebrow" style="justify-content:center;">Who We Serve</div>
+        <h2>Built for Katy home services</h2>
+        <p style="color:var(--muted); max-width:480px; margin:0.8rem auto 0;">We specialize exclusively in home services. We know your searches, your seasonality, and your competitors.</p>
+      </div>
+      <div class="verticals-row reveal">
+        <div class="vertical-pill"><span class="icon">❄️</span> HVAC &amp; Air Conditioning</div>
+        <div class="vertical-pill"><span class="icon">🔧</span> Plumbing</div>
+        <div class="vertical-pill"><span class="icon">🏠</span> Roofing</div>
+        <div class="vertical-pill"><span class="icon">⚡</span> Electrical</div>
+        <div class="vertical-pill"><span class="icon">🌿</span> Landscaping &amp; Lawn Care</div>
+        <div class="vertical-pill"><span class="icon">🪟</span> Windows &amp; Doors</div>
+        <div class="vertical-pill"><span class="icon">🎨</span> Painting</div>
+        <div class="vertical-pill"><span class="icon">🛁</span> Remodeling</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section id="trust">
+    <div class="container">
+      <div class="trust-inner reveal">
+        <div class="trust-quote">
+          <p>"The first time I watched it pull competitor category data, map it against map pack rankings, and highlight every category I was missing — I just stared at the screen. That analysis alone used to take half a day per client. Now it takes minutes."</p>
+          <div class="trust-attr">
+            <strong>14-Year Local SEO Veteran</strong>
+            Home Services Specialist
+          </div>
+        </div>
+
+        <div class="trust-points">
+          <div class="section-eyebrow">Why Stella TX</div>
+          <h2>What makes us different</h2>
+
+          <div class="trust-point">
+            <div class="tp-icon">★</div>
+            <div>
+              <div class="tp-title">The only LEO agency in Katy</div>
+              <div class="tp-desc">LLM Engine Optimization is new. Most agencies do not offer it. We built our entire system around it — giving you visibility in AI search before competitors even know it exists.</div>
+            </div>
+          </div>
+
+          <div class="trust-point">
+            <div class="tp-icon">📊</div>
+            <div>
+              <div class="tp-title">Data first, always</div>
+              <div class="tp-desc">Every recommendation comes from your actual competitor data — categories they have, reviews they are getting, AI answers they are appearing in. No guesswork.</div>
+            </div>
+          </div>
+
+          <div class="trust-point">
+            <div class="tp-icon">📍</div>
+            <div>
+              <div class="tp-title">Katy-specific expertise</div>
+              <div class="tp-desc">We know Cinco Ranch, Cross Creek Ranch, Fulshear, and the neighborhoods where your customers live. Local specificity is how you win local search.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-eyebrow" style="justify-content:center;" >Get Started</div>
+        <h2>Get your free<br /><span class="gold">GBP Score today</span></h2>
+        <p>Tell us about your business and we will audit your Google presence within 24 hours — completely free, no pitch, just data.</p>
+
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Business Name</label>
+              <input type="text" placeholder="Smith HVAC" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="(832) 555-0100" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="john@smithhvac.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your Industry</label>
+            <select>
+              <option value="">Select your vertical...</option>
+              <option>HVAC / Air Conditioning</option>
+              <option>Plumbing</option>
+              <option>Roofing</option>
+              <option>Electrical</option>
+              <option>Landscaping / Lawn Care</option>
+              <option>Remodeling / Renovation</option>
+              <option>Painting</option>
+              <option>Other Home Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Website URL (if you have one)</label>
+            <input type="url" placeholder="https://smithhvac.com" />
+          </div>
+          <div class="form-group">
+            <label>Anything else we should know?</label>
+            <textarea placeholder="Tell us about your biggest challenge with Google visibility..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Get My Free GBP Score →
+          </button>
+        </form>
+
+        <div class="contact-alts">
+          <a href="mailto:hello@stellatx.co" class="contact-alt">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+              <rect x="1" y="3" width="14" height="10" rx="1"/>
+              <path d="M1 4l7 5 7-5"/>
+            </svg>
+            hello@stellatx.co
+          </a>
+          <a href="tel:+18325550100" class="contact-alt">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M3 2h3l1.5 3.5-2 1.5a9 9 0 003.5 3.5l1.5-2L14 10v3a1 1 0 01-1 1A12 12 0 012 3a1 1 0 011-1z"/>
+            </svg>
+            Katy, TX
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4A843">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/>
+      </svg>
+      Stella TX
+    </div>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2025 Stella TX · Katy, Texas · stellatx.co</div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Smooth nav background
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.background = window.scrollY > 60
+        ? 'rgba(6,8,15,0.97)'
+        : 'linear-gradient(to bottom, rgba(6,8,15,0.95), transparent)';
+    });
+
+    // Form submit handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-submit');
+      btn.textContent = '✓ Received! We will be in touch within 24 hours.';
+      btn.style.background = '#1A6B3A';
+      btn.style.color = '#fff';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
